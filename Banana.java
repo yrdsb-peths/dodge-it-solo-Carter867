@@ -18,6 +18,9 @@ public class Banana extends Actor
         }
         
         if(isTouching(Hero.class)){
+            //add game over
+            SadFace sadFace = new SadFace();
+            getWorld().addObject(sadFace, 300, 200);
             getWorld().removeObject(this);
         }
     }
